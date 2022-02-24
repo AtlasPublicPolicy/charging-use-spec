@@ -65,3 +65,87 @@ The first three tables are hierarchical, representing in order: 1) charging site
 Table 4 conveys program application and funding data for specific projects (charging stations funded under the same application). Projects are tied to the charging site and stations that project funded. One site might host chargers from multiple projects if additional stations are added over time. 
  
 For each table the required column can be _Yes_, _No_, or _Program_ where Yes means the field must be delivered for compliance and _Program_ means the field may be required for some programs and not others. For the “Requirements and Data Format” column, any field in **bold** beginning with **Standard** is defined in Appendix A.
+ 
+Table 1: Charging Site Registration 
+
+|**Field** |**Description** |**Data Format** |**Required** |
+| :- | :- | :- | :- |
+|**site\_id** |unique identity specific to the network for the location of this charging station (may be same as application\_number in table 4) |ID (unique) |yes |
+|**site\_name** |descriptive name of charging site (e.g., Mercy Hospital) |string |yes |
+|**network** |entity providing charging (including “none”) |**Standard Charging Network** |yes |
+|**site\_type** |type of site host for the charging site. |**Standard Site Type** |yes |
+|**site\_type\_detail** |additional detail on site host land use |string |no |
+|**access\_type** |Type of access available (public/unrestricted, private/restricted) |**Standard Access Type** |yes |
+|**address\_1** |site address, line one |string |yes |
+|**address\_2** |site address, line two |string |no |
+|**city** |station city |**Standard City Type** |yes |
+|**state** |station state (full name) |**Standard State Type** |yes |
+|**zip\_code** |Station ZIP code |ZIP code |yes |
+|**poc\_first\_name** |location site host point of contact first name |string |yes |
+|**poc\_last\_name** |location site host point of contact last name |string |yes |
+|**poc\_email** |location site host point of contact email address |email |yes |
+|**data\_provider\_first\_name** |data provider point of contact first name |string |yes |
+|**data\_provider\_last\_name** |data provider point of contact last name |string |yes |
+|**data\_provider\_email** |data provider point of contact email address |email |yes |
+
+
+Table 2: Charging Station Registration 
+
+|**Field**  |**Definition** |**Data Format** |**Required** |
+| :- | :- | :- | :- |
+|**station\_id** |unique identifier of charging station generated upon registration (e.g., 01-000001) |ID (unique)  |yes |
+|**station\_serial** |unique identifier of charging station derived from station serial number or network identifier (e.g., 123-345-2) |ID (unique) |yes |
+|**station\_name** |name of charging station (e.g., Mercy Hospital – 2) |string |yes |
+|**site\_id** |location identifier that corresponds to table 1 |ID (foreign) |yes |
+|**org\_name** |organization name of the entity obligated to report data (more than one organization can operate a charging station at a single site) |string |yes |
+|**site\_host\_name** |name of site host if different from org\_name |string |no |
+|**operating\_hours** |number of hours station is open per day—if not 24 (e.g., a station open from 6 AM to 6 PM is open 12 hours)  |positive float |no |
+|**latitude** |station latitude |latitude |yes |
+|**longitude** |station longitude |longitude |yes |
+|**station\_activation\_date** |date station was officially activated for public use |date |yes |
+|**serial\_number** |charging station serial number unique to charging equipment provider |string or integer |no |
+|**model\_number** |charging station model number |string or integer |no |
+|**num\_ports** |number of simultaneously usable ports |positive integer |no |
+|**evse\_manufacturer** |charging equipment manufacturer name |**Standard Charging Equipment Name** |no |
+Table 3: Charging Port Registration 
+
+|**Field**  |**Definition** |**Data Format** |**Required** |
+| :- | :- | :- | :- |
+|**port\_id** |unique identifier for the charging port specific to *station\_id* (e.g., 1)  |ID (unique) |yes |
+|**site\_id** |location identifier that corresponds to table 1 |ID (foreign) |yes |
+|**station\_id** |station identifier that corresponds to table 1 |ID (foreign) |yes |
+|**connector\_type** |charging connector type  |**Standard Connector Type** |yes |
+|**power\_level\_kw** |maximum charging power level in kilowatts (must correspond to connector type limitations) |positive float |yes |
+|**energy\_fee** |fee charged to user per kilowatt-hour |currency (USD) |program |
+|**session\_fee** |fee charged to user per session |currency (USD) |program |
+|**time\_fee** |fee charged to users per minute |currency (USD) |program |
+|**parking\_fee** |fee charged for parking if separate from time\_fee |currency (USD) |program |
+|**idle\_fee** |fee charged for minutes not charging if separate from time fee |currency (USD) |program |
+Table 4: Project/Application Funding and Cost 
+
+|**Field**  |**Definition** |**Data Format** |**Required** |
+| :- | :- | :- | :- |
+|**project\_number** |project identifier unique to primary\_funding\_source (may be same as site\_id in table 1) |ID (unique) |yes |
+|**primary\_funding\_source** |primary public funding source for the project/application |**Standard Primary Funding Source** |yes |
+|**site\_id** |location identifier that corresponds to table 1 |ID (foreign) |yes |
+|**covered\_stations** |single or list of station\_id (table 2) funded by project – if list, delimited by a semi-colon (E.g., 2201; 2202; 2203) |ID (foreign) |yes |
+|**primary\_funding** |amount of funding station received from the primary funding source dedicated to the charging site (can include funds for installation, e.g., make-ready, equipment, and site preparation, but should not include any funding for station operation) |currency (USD) |yes |
+|**utility\_makeready** |amount of funding the project received from electric utilities dedicated to infrastructure make-ready |currency (USD) |program  |
+|**utility\_funding\_other** |amount of funding the project received from utility for equipment or other non-make-ready costs (should not include any funding for operational costs) |currency (USD) |program  |
+|**dac\_proximate** |(For DCFC) project is located inside or within 0.5 miles of disadvantaged community as defined by local jurisdiction |TRUE/FALSE |program |
+|**in\_dac** |project is located inside of disadvantaged community as defined by local jurisdiction |TRUE/FALSE |program |
+|**other\_makeready** |amount of other public funding station received dedicated to infrastructure make-ready |currency (USD) |program |
+|**other\_funding\_other** |amount of other public funding project received for equipment or other non-make-ready costs (should not include any funding for operational costs) |currency (USD) |program  |
+|**cost\_share** |funding amount project has received from other (private, non-utility) sources when combined with primary\_funding and utility\_funding and other\_public\_funding equals the total cost of the charging installation |currency (USD) |program |
+
+
+Table 5: Charging Station De-Registration 
+
+|**Field**  |**Definition** |**Data Format** |**Required** |
+| :- | :- | :- | :- |
+|**station\_id** |identifier of charging station in table 2 (e.g., 123-345-2) |ID (foreign) |yes |
+|**station\_name** |name of charging station (e.g., Mercy Hospital – 2) |string |yes |
+|**site\_id** |location identifier of charging station in table 1 |ID (foreign) |yes |
+|**station\_deactivation\_date** |date station was officially activated for public use |date |yes |
+|**serial\_number** |charging station serial number unique to charging equipment provider |string or integer |no |
+|**station\_status** |what was done with the station |REMOVED, REPLACED, MOVED |yes |
