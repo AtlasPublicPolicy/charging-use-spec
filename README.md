@@ -41,9 +41,9 @@ The tables below can be incorporated into a data model that allow for aggregatin
 ```mermaid 
 graph TD
  A((Participants)) --> B[Charging Site Registration]
- B --*site\_id* --> C[Charging Station Registration]
- C --*station\_id* --> D[Charging Port Registration]
- D --*port\_id* --> E(Session Data)
+ B --site_id --> C[Charging Station Registration]
+ C --station_id --> D[Charging Port Registration]
+ D --port_id --> E(Session Data)
 ```
  
  ## Data Collection
