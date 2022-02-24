@@ -194,7 +194,7 @@ For the *Data Format* column, any field in bold beginning with Standard is defin
 |**session\_fee** |fee charged to user per session |currency (USD) |yes |
 |**time\_fee** |fee charged to users per minute |currency (USD) |yes |
 |**session\_initiator** |method to initiate the charging session |**Standard Session Initialization** |no |
-|**user\_id** |network-specific id for each unique user |**string** |no |
+|**user\_id** |network-specific id for each unique user |string |no |
 |**ended\_normally** |whether or not the session ended as expected. Used to exclude sessions where something unexpected cause the session to end, like a power outage |TRUE/FALSE |no |
 |**ended\_by** |cause of the session to end (e.g., unplugged while charging). |**Standard Ended By** |no |
 |**start\_soc** |battery state of charge at session start represented as a decimal between 0 and 1 |non-negative float  |no |
