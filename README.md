@@ -166,6 +166,17 @@ For each table the required column can be _Yes_, _No_, or _Program_ where Yes me
 |**serial\_number** |charging station serial number unique to charging equipment provider |string or integer |no |
 |**station\_status** |what was done with the station |REMOVED, REPLACED, MOVED |yes |
 
+## Session Data
+
+Session data will contain records for each session that occurred at a program-funded port and station operated by the participant.
+
+While reporting and data availability requirements are unique to each program and vendor, the following guidelines are recommended:
+
+ - Session data tables will be updated monthly. Providers who cannot make the session data readily accessible via a web API or web-based dashboard must transmit monthly data by the 15th of the following month.
+- Each file will be named: _YYYY-MM-DD _<Network>_<Participant ID>_Sessions_ where  the network is defined in Table 2 and the two dates are the start and end period covered by the data. Fields to be included in the session data tables are listed in Table 4.
+
+For the *Data Format* column, any field in bold beginning with Standard is defined in Appendix A.
+ 
 **Table 6: Charging Sessions by Port**
 
 |**Field** |**Definition** |**Data Format** |**Required** |
