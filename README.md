@@ -38,7 +38,13 @@ The tables below can be incorporated into a data model that allow for aggregatin
   
 **Figure 1: Database Schema**
  
-![Figure 1 Database Schema](https://github.com/AtlasPublicPolicy/charging-use-spec/blob/main/figure_1.png)
+```mermaid 
+graph TD
+ A((Participants)) --> B[Charging Site Registration]
+ B --*site\_id* --> C[Charging Station Registration]
+ C --*station\_id* --> D[Charging Port Registration]
+ D --*port\_id* --> E(Session Data)
+```
  
  ## Data Collection
 This section describes the process by which program participants can share their charging utilization data required for reporting. This process starts with the Data Collector receiving information about participants that have entered the program. These data can be submit-ted by the Program Operator to the Data Collector in a spreadsheet form in order to initi-ate the participant into the data collection process.
