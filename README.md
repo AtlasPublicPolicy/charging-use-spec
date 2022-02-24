@@ -24,7 +24,7 @@ This section refers to the following field types
  - **String** - Text field of UTF-8 characters (letters, numbers, punctuation, and symbols). Empty string fields are \<NULL>.
  - **Numeric** - A numeric field contains only properly formatted numbers. Empty numeric fields are <NA>. 
   *Example: 10 or 99 but not 099*
- - *Float** - numeric field that may contain up to seven significant digits.  
+ - **Float** - numeric field that may contain up to seven significant digits.  
   *Example: 1.111 or 1.1111111*
  - **Integer** - specific numeric fields which may only contain whole numbers.   
   *Example: 2 or 5 but not 2.1*
