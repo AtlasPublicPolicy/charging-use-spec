@@ -43,6 +43,21 @@ This section refers to the following field types
  - **ZIP Code** - valid five-digit ZIP code between 00501 and 99950.  
   *Example: 20500 for the White House*
 
+Some fields are limited to a specific set of potential inputs defined by reporting program needs. Suggested values are included in table 1 below. 
+ 
+**Table 1: Suggested values for programmatic inputs**
+ **Field**|**Description**|**Suggested Values**|
+| :- | :- | :- |
+|**network**|name of charging network service provider|<p>ChargePoint</p><p>EVgo</p><p>Greenlots</p><p>…</p><p></p>|
+|**site\_type**|category of charging site|<p>Standalone</p><p>Workplace</p><p>Multi-Family Dwelling </p><p>Single-Family Dwelling</p><p>Curbside</p><p>...</p>|
+|**access\_type**|how a site is accessed|<p>Public/Unrestricted</p><p>Private/Restricted</p><p>...</p>|
+|**ended\_by**|how a session ended|<p>EV\_Disconnected</p><p>Power\_Loss</p><p>Reboot\_Reset</p><p>Remote</p><p>Local</p><p>Other</p><p>Unknown</p><p>…</p>|
+|**port\_type**|charging port configuration|<p>CCS</p><p>CHAdeMO</p><p>Tesla (DCFC)</p><p>J1772</p><p>Tesla (AC)</p><p>...</p>|
+|**evse\_manufacturer**|name of charging equipment manufacturer|<p>ABB</p><p>ChargePoint</p><p>…</p>|
+|**session\_initiator**|method to initiate the charging session|<p>API</p><p>mobile app</p><p>direct at station</p><p>…</p>|
+|**station\_status**|operating state of the charging station|<p>online</p><p>offline</p><p>unknown</p><p>...</p>|
+|**primary\_funding\_source**|primary public funding source for the project|<p>Volkswagen Settlement</p><p>U.S. Department of Energy</p><p>U.S. Department of Transportation</p><p>State Department of Transportation</p><p>...</p>|
+ 
 The tables below can be incorporated into a data model that allow for aggregating across tables using relationships between tables.
   
 **Figure 1: Database Schema**
@@ -73,15 +88,15 @@ Thus, for john.doe<void>@example.com as the first participant, the generated ide
 ## Site, Station, and Port Registration
 The key reporting unit is the charging station, which, as defined in Box 1 is the individual unit of charging equipment. For each charging station tracked, registration data will be provided by the participants to the Program Operator describing the location and type of equipment. Supplemental attributes may be included specific to the project, such as public program funding. These tables will be updated regularly by the Program Operator whenever a new station covered by the project is deployed or a new participant joins the program. The Program Operator will provide an updated inventory list to the Data Collector on a periodic basis, and new stations and participants will be added to the station database.
  
-Fields to be included in the registration data tables are described in Table 1, Table 2, Table 3 and Table 4. Combined, these four tables contain all relevant attributes necessary to identify, aggregate, and analyze charging session data.
+Fields to be included in the registration data tables are described in Table 2, Table 3, Table 4 and Table 5. Combined, these four tables contain all relevant attributes necessary to identify, aggregate, and analyze charging session data.
  
-The first three tables are hierarchical, representing in order: 1) charging site, which is the site host location for one or more charging stations in the same network (or otherwise managed jointly), 2) individual charging station, and 3) each charging port attached to a charging station, sometimes known as a plug. Each port is uniquely linked to a charging station, which is inturn uniquely linked to a charging site. Individual entry is provided for ports to allow for flexibility on power delivery and fee structures.
+The first three tables (2-4) are hierarchical, representing in order: 1) charging site, which is the site host location for one or more charging stations in the same network (or otherwise managed jointly), 2) individual charging station, and 3) each charging port attached to a charging station, sometimes known as a plug. Each port is uniquely linked to a charging station, which is inturn uniquely linked to a charging site. Individual entry is provided for ports to allow for flexibility on power delivery and fee structures.
 
-Table 4 conveys program application and funding data for specific projects (charging stations funded under the same application). Projects are tied to the charging site and stations that project funded. One site might host chargers from multiple projects if additional stations are added over time. 
+Table 5 conveys program application and funding data for specific projects (charging stations funded under the same application). Projects are tied to the charging site and stations that project funded. One site might host chargers from multiple projects if additional stations are added over time. 
  
-For each table the required column can be _Yes_, _No_, or _Program_ where Yes means the field must be delivered for compliance and _Program_ means the field may be required for some programs and not others. For the “Requirements and Data Format” column, any field in **bold** beginning with **Standard** is defined in Appendix A.
+For each table the required column can be _Yes_, _No_, or _Program_ where Yes means the field must be delivered for compliance and _Program_ means the field may be required for some programs and not others. For the *Data Format* column, fields in bold referece suggested programmatic inputs listed in table 1.
  
-**Table 1: Charging Site Registration**
+**Table 2: Charging Site Registration**
 
 |**Field** |**Description** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -103,7 +118,7 @@ For each table the required column can be _Yes_, _No_, or _Program_ where Yes me
 |**data\_provider\_last\_name** |data provider point of contact last name |string |yes |
 |**data\_provider\_email** |data provider point of contact email address |email |yes |
 
-**Table 2: Charging Station Registration**
+**Table 3: Charging Station Registration**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -122,7 +137,7 @@ For each table the required column can be _Yes_, _No_, or _Program_ where Yes me
 |**num\_ports** |number of simultaneously usable ports |positive integer |no |
 |**evse\_manufacturer** |charging equipment manufacturer name |**Standard Charging Equipment Name** |no |
 
-**Table 3: Charging Port Registration**
+**Table 4: Charging Port Registration**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -137,7 +152,7 @@ For each table the required column can be _Yes_, _No_, or _Program_ where Yes me
 |**parking\_fee** |fee charged for parking if separate from time\_fee |currency (USD) |program |
 |**idle\_fee** |fee charged for minutes not charging if separate from time fee |currency (USD) |program |
 
-**Table 4: Project/Application Funding and Cost**
+**Table 5: Project/Application Funding and Cost**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -155,7 +170,7 @@ For each table the required column can be _Yes_, _No_, or _Program_ where Yes me
 |**cost\_share** |funding amount project has received from other (private, non-utility) sources when combined with primary\_funding and utility\_funding and other\_public\_funding equals the total cost of the charging installation |currency (USD) |program |
 
 
-**Table 5: Charging Station De-Registration**
+**Table 6: Charging Station De-Registration**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -175,9 +190,9 @@ While reporting and data availability requirements are unique to each program an
  - Session data tables will be updated monthly. Providers who cannot make the session data readily accessible via a web API or web-based dashboard must transmit monthly data by the 15th of the following month.
 - Each file will be named: _YYYY-MM-DD _<Network>_<Participant ID>_Sessions_ where  the network is defined in Table 2 and the two dates are the start and end period covered by the data. Fields to be included in the session data tables are listed in Table 4.
 
-For the *Data Format* column, any field in bold beginning with Standard is defined in Appendix A.
+For the *Data Format* column, fields in bold referece suggested programmatic inputs listed in table 1.
  
-**Table 6: Charging Sessions by Port**
+**Table 7: Charging Sessions by Port**
 
 |**Field** |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
