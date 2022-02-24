@@ -165,3 +165,26 @@ For each table the required column can be _Yes_, _No_, or _Program_ where Yes me
 |**station\_deactivation\_date** |date station was officially activated for public use |date |yes |
 |**serial\_number** |charging station serial number unique to charging equipment provider |string or integer |no |
 |**station\_status** |what was done with the station |REMOVED, REPLACED, MOVED |yes |
+
+**Table 6: Charging Sessions by Port**
+
+|**Field** |**Definition** |**Data Format** |**Required** |
+| :- | :- | :- | :- |
+|**station\_id** |location identifier that corresponds to table 2 |ID (foreign) |yes |
+|**port\_id** |location identifier that corresponds to table 3 |ID (foreign) |yes |
+|**site\_id** |location identifier that corresponds to table 1 |ID (foreign) |yes |
+|**plug\_start\_datetime** |date and time of session initialization |date/time |yes |
+|**plug\_end\_datetime** |session completion date time. |date/time |no |
+|**session\_duration** |total duration of session in minutes (plug in to plug out) |non-negative float |yes  |
+|**charging\_duration** |total duration of charging event (charge start to charge stop) |non-negative float |program |
+|**energy\_kwh** |energy dispensed in kilowatt-hours during charging session |non-negative float |yes |
+|**peak\_kw** |session maximum power level in kilowatts |non-negative float |yes |
+|**energy\_fee** |fee charged to user per kilowatt-hour |currency (USD) |yes |
+|**session\_fee** |fee charged to user per session |currency (USD) |yes |
+|**time\_fee** |fee charged to users per minute |currency (USD) |yes |
+|**session\_initiator** |method to initiate the charging session |**Standard Session Initialization** |no |
+|**user\_id** |network-specific id for each unique user |**string** |no |
+|**ended\_normally** |whether or not the session ended as expected. Used to exclude sessions where something unexpected cause the session to end, like a power outage |TRUE/FALSE |no |
+|**ended\_by** |cause of the session to end (e.g., unplugged while charging). |**Standard Ended By** |no |
+|**start\_soc** |battery state of charge at session start represented as a decimal between 0 and 1 |non-negative float  |no |
+|**end\_soc** |battery state of charge at session end represented as a decimal between 0 and 1 |non-negative float |no |
