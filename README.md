@@ -21,18 +21,26 @@ Data can be collected from charging networks, vendors, or owner-operators (colle
 
 ### Field Type Definitions
 This section refers to the following field types
- - **String** - Text field of UTF-8 characters (letters, numbers, punctuation, and symbols). Empty string fields are <NULL>.
- - **Numeric** - A numeric field contains only properly formatted numbers. Empty numeric fields are <NA>. *Example: 10 or 99 but not 099*
- - *Float** - numeric field that may contain up to seven significant digits. *Example: 1.111 or 1.1111111*
- - **Integer** - specific numeric fields which may only contain whole numbers. *Example: 2 or 5 but not 2.1*
+ - **String** - Text field of UTF-8 characters (letters, numbers, punctuation, and symbols). Empty string fields are \<NULL>.
+ - **Numeric** - A numeric field contains only properly formatted numbers. Empty numeric fields are <NA>. 
+  *Example: 10 or 99 but not 099*
+ - *Float** - numeric field that may contain up to seven significant digits. 
+  *Example: 1.111 or 1.1111111*
+ - **Integer** - specific numeric fields which may only contain whole numbers. 
+  *Example: 2 or 5 but not 2.1*
  - **ID** - sequence of UTF-8 characters. ID fields labeled unique must be unique to the conditions described in the field description. ID fields that are labeled foreign reference ID fields in other tables.
- - **Currency** - Currency is a specialized numeric field that contains exactly two significant digits. *Example: 5.00 but not 5.000 or 5*
+ - **Currency** - Currency is a specialized numeric field that contains exactly two significant digits. 
+  *Example: 5.00 but not 5.000 or 5*
  - **Date/time** - string field with the format: YYYYMMDD hh:mm:ss [+/-hh:mm] where time is represented by a 24 hour clock and time in brackets represents the distance from coordinated universal time. *Example: 20220101 01:01:01 [-5:00] represents January 1, 2022 at 12:01 AM ET*
- - **Latitude** - WGS84 latitude in decimal degrees (EPSG:4326). Must be between -90.0 and 90.0. *Example: 38.889484 for the Washington Monument*
- - **Longitude** - WGS84 longitude in decimal degrees (EPSG:4326). Must be between -180.0 and 180.0. *Example: -77.035278 for the Washington Monument*
- - **Email** - properly formatted email address. *Example: example<void>@example.com*
+ - **Latitude** - WGS84 latitude in decimal degrees (EPSG:4326). Must be between -90.0 and 90.0. 
+  *Example: 38.889484 for the Washington Monument*
+ - **Longitude** - WGS84 longitude in decimal degrees (EPSG:4326). Must be between -180.0 and 180.0. 
+  *Example: -77.035278 for the Washington Monument*
+ - **Email** - properly formatted email address. 
+  *Example: example<void>@example.com*
  - **TRUE/FALSE** - Boolean value symbolized by text “TRUE” or “FALSE”
- - **ZIP Code** - valid five-digit ZIP code between 00501 and 99950. *Example: 20500 for the White House*
+ - **ZIP Code** - valid five-digit ZIP code between 00501 and 99950. 
+  *Example: 20500 for the White House*
 
 The tables below can be incorporated into a data model that allow for aggregating across tables using relationships between tables.
   
