@@ -107,6 +107,7 @@ Table 2: Charging Station Registration
 |**model\_number** |charging station model number |string or integer |no |
 |**num\_ports** |number of simultaneously usable ports |positive integer |no |
 |**evse\_manufacturer** |charging equipment manufacturer name |**Standard Charging Equipment Name** |no |
+
 Table 3: Charging Port Registration 
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
@@ -121,6 +122,7 @@ Table 3: Charging Port Registration
 |**time\_fee** |fee charged to users per minute |currency (USD) |program |
 |**parking\_fee** |fee charged for parking if separate from time\_fee |currency (USD) |program |
 |**idle\_fee** |fee charged for minutes not charging if separate from time fee |currency (USD) |program |
+
 Table 4: Project/Application Funding and Cost 
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
