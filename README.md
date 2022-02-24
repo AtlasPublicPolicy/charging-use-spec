@@ -72,7 +72,7 @@ Table 4 conveys program application and funding data for specific projects (char
  
 For each table the required column can be _Yes_, _No_, or _Program_ where Yes means the field must be delivered for compliance and _Program_ means the field may be required for some programs and not others. For the “Requirements and Data Format” column, any field in **bold** beginning with **Standard** is defined in Appendix A.
  
-Table 1: Charging Site Registration 
+**Table 1: Charging Site Registration**
 
 |**Field** |**Description** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -94,8 +94,7 @@ Table 1: Charging Site Registration
 |**data\_provider\_last\_name** |data provider point of contact last name |string |yes |
 |**data\_provider\_email** |data provider point of contact email address |email |yes |
 
-
-Table 2: Charging Station Registration 
+**Table 2: Charging Station Registration**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -114,7 +113,7 @@ Table 2: Charging Station Registration
 |**num\_ports** |number of simultaneously usable ports |positive integer |no |
 |**evse\_manufacturer** |charging equipment manufacturer name |**Standard Charging Equipment Name** |no |
 
-Table 3: Charging Port Registration 
+**Table 3: Charging Port Registration**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -129,7 +128,7 @@ Table 3: Charging Port Registration
 |**parking\_fee** |fee charged for parking if separate from time\_fee |currency (USD) |program |
 |**idle\_fee** |fee charged for minutes not charging if separate from time fee |currency (USD) |program |
 
-Table 4: Project/Application Funding and Cost 
+**Table 4: Project/Application Funding and Cost**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
@@ -147,7 +146,7 @@ Table 4: Project/Application Funding and Cost
 |**cost\_share** |funding amount project has received from other (private, non-utility) sources when combined with primary\_funding and utility\_funding and other\_public\_funding equals the total cost of the charging installation |currency (USD) |program |
 
 
-Table 5: Charging Station De-Registration 
+**Table 5: Charging Station De-Registration**
 
 |**Field**  |**Definition** |**Data Format** |**Required** |
 | :- | :- | :- | :- |
