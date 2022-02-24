@@ -33,7 +33,7 @@ This section refers to the following field types
   *Example: 5.00 but not 5.000 or 5*
  - **Date/time** - string field with the format: YYYYMMDD hh:mm:ss [+/-hh:mm] where time is represented by a 24 hour clock and time in brackets represents the distance from coordinated universal time.  
   *Example: 20220101 01:01:01 [-5:00] represents January 1, 2022 at 12:01 AM ET*
- - **Latitude** - WGS84 latitude in decimal degrees [EPSG:4326](https://epsg.io/4326)). Must be between -90.0 and 90.0.  
+ - **Latitude** - WGS84 latitude in decimal degrees ([EPSG:4326](https://epsg.io/4326)). Must be between -90.0 and 90.0.  
   *Example: 38.889484 for the Washington Monument*
  - **Longitude** - WGS84 longitude in decimal degrees ([EPSG:4326](https://epsg.io/4326)). Must be between -180.0 and 180.0.  
   *Example: -77.035278 for the Washington Monument*
