@@ -22,7 +22,7 @@ Data can be collected from charging networks, vendors, or owner-operators (colle
 ### Field Type Definitions
 This section refers to the following field types
  - **String** - Text field of UTF-8 characters (letters, numbers, punctuation, and symbols). Empty string fields are \<NULL>.
- - **Numeric** - A numeric field contains only properly formatted numbers. Empty numeric fields are <NA>. 
+ - **Numeric** - A numeric field contains only properly formatted numbers. Empty numeric fields are \<NA>. 
   *Example: 10 or 99 but not 099*
  - **Float** - numeric field that may contain up to seven significant digits.  
   *Example: 1.111 or 1.1111111*
