@@ -41,7 +41,7 @@ To facilitate efficient data sharing, the third party that monitors station usag
 ## Project Registration
 During project onboarding the [program administrator](global-reference.md) will collect and record project-level information from the applicant [obligated party](global-reference.md) as outlined in Table 1. Project registration includes applicant information and general information on project funding including public/utility funding source and amount, and must be associated with a single geographic location (site). If detailed cost information, including itemized installation costs are desired, please see the installation costs extension [\[FORTHCOMING\]](roadmap.md). 
 
-Refer to the [field type definitions](global-reference.md) in the global reference for more information on field types. *Additional fields may be appended as new columns are needed, but existing columns and their formats should be maintained to support interoperability.*
+Refer to the [field type definitions](global-reference.md#types) in the global reference for more information on field types. *Additional fields may be appended as new columns are needed, but existing columns and their formats should be maintained to support interoperability.*
 
 **Table 1: Project Registration**
 
@@ -93,7 +93,7 @@ Also during project onboarding, the [program administrator](global-reference.md)
 
 Each  station inherits the attributes of the site where it is located and the project that funded it. Station registration entries also include attributes specific to the individual charging station including exact location, power level, and other station-level attributes as listed in Table 3. 
 
-Refer to the [field type definitions](global-reference.md) in the global reference for more information on field types. * Additional fields may be appended as new columns as needed, but existing columns and their formats should be maintained to support interoperability.*
+Refer to the [field type definitions](global-reference.md#types) in the global reference for more information on field types. * Additional fields may be appended as new columns as needed, but existing columns and their formats should be maintained to support interoperability.*
 
  **Table 3: Station Registration**
 
@@ -157,7 +157,7 @@ graph TD
 
 Session data may be transmitted to the [data aggregator](global-reference.md) by, data portal, FTP, API, email, or other data sharing procedure. While data sharing is container agnostic, session data must conform to the format described in Table 5 and should be stored in or transformable to a broadly compatible container such as a comma-separated values (CSV) file. Data delivery procedures and file formats may be further specified by the [program administrator](global-reference.md).
 
-Refer to the [field type definitions](global-reference.md) in the global reference for more information on field types. * Additional fields may be appended as new columns as needed, but existing columns and their formats should be maintained to support interoperability.*
+Refer to the [field type definitions](global-reference.md#types) in the global reference for more information on field types. * Additional fields may be appended as new columns as needed, but existing columns and their formats should be maintained to support interoperability.*
  
 **Table 5: Session Reporting**
 
