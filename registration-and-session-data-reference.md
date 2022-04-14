@@ -6,13 +6,13 @@ Registration information is also used in specification extensions linking to cos
 
 ## Contents
 
- 1. [Program Registry and Onboarding Process](#ppr)
-     1. [Project Registration](#sppr)
-     2. [Site Registration](#psr)
-     3. [Station and Port Registration](#spnr)
- 2. [Session Data Collection](#session)
+ 1. [Program Registry and Onboarding Process](#program-registry-and-onboarding-process)
+     1. [Project Registration](#project-registration)
+     2. [Site Registration](#site-registration)
+     3. [Station and Port Registration](#station-and-port-registration)
+ 2. [Session Data Collection](#session-data-collection)
 
-#  <a name = "ppr"></a>Program Registry and Onboarding Process
+#  Program Registry and Onboarding Process
 
 The program registry contains entries for all charging stations deployed by program funding and is a critical component of the evaluation, measurement, and verification process because it contains the reference information required for program reporting activities. Project registration data is collected and maintained by the [program administrator](global-reference.md) or [data aggregator](global-reference.md). Recommended practice is to integrate administrative onboarding processes with registration data collection to reduce duplicative effort and ensure that all necessary registration data collection occurs prior to funding disbursement. Figure 1 shows the program registry hierarchy with individual identifying keys that link the entries together.
 
@@ -38,7 +38,7 @@ To facilitate efficient data sharing, the third party that monitors station usag
 
 *Fields marked as required must be included to comply with the specification, while optional fields may be made required at the discretion of the [program administrator](global-reference.md).* 
 
-## <a name = "pr"></a>  Project  Registration
+## Project Registration
 During project onboarding the [program administrator](global-reference.md) will collect and record project-level information from the applicant [obligated party](global-reference.md) as outlined in Table 1. Project registration includes applicant information and general information on project funding including public/utility funding source and amount, and must be associated with a single geographic location (site). If detailed cost information, including itemized installation costs are desired, please see the installation costs extension [\[FORTHCOMING\]](roadmap.md). 
 
 Refer to the [field type definitions](global-reference.md) in the global reference for more information on field types. *Additional fields may be appended as new columns are needed, but existing columns and their formats should be maintained to support interoperability.*
@@ -64,7 +64,7 @@ Refer to the [field type definitions](global-reference.md) in the global referen
 |**in\_dac** |project is located inside of disadvantaged community as defined by local jurisdiction |TRUE/FALSE |no |
 |**dac\_proximate** |project is located within 0.5 miles of disadvantaged community as defined by local jurisdiction |TRUE/FALSE |no |
 
-## <a name = "psr"></a>  Site  Registration
+## Site Registration
 Also during project onboarding, the [program administrator](global-reference.md) will collect site information from the applicant [obligated party](global-reference.md). If the site address of the project matches a site already in the site registry, then the project should be associated with the existing site_id.
 
 **Table 2: Site Registration**
@@ -88,7 +88,7 @@ Also during project onboarding, the [program administrator](global-reference.md)
 |**site\_type\_detail** |additional detail on site host land use |string |no |
 
 
-## <a name = "spnr"></a> Station and Port Registration
+## Station and Port Registration
 Also during project onboarding, the [program administrator](global-reference.md) will collect station and port information from the applicant [obligated party](global-reference.md). If usage data will be provided by a third-party [data provider](global-reference.md), collecting the station identifier used by that third party to identify specific stations in their system is a critical step in the onboarding process. This ensures that the [data aggregator](global-reference.md) can successfully link usage data secured from the [data provider](global-reference.md) to stations within the registry. The [program administrator](global-reference.md) should also have a process in place to update the station registration in the event that station is upgraded, taken offline, or if the [data provider](global-reference.md) is replaced.
 
 Each  station inherits the attributes of the site where it is located and the project that funded it. Station registration entries also include attributes specific to the individual charging station including exact location, power level, and other station-level attributes as listed in Table 3. 
@@ -141,7 +141,7 @@ The port registry is a child table to station registration that includes attribu
 
 
 
-# <a name="session></a> Session Data Collection
+# Session Data Collection
 
 Station usage is tracked by collecting data on individual charging sessions &mdash; the period between when a user connects their vehicle (plug in) and disconnects their vehicle (plug out). The [data aggregator](global-reference.md) collects session data on a predefined schedule set by the [program administrator](global-reference.md). The data is collected and transmitted to the [data aggregator](global-reference.md) by the [data provider](global-reference.md) (or [obligated party](global-reference.md) in the case where they own and operate their stations). Session data includes key information about how, when, and, for how long a charger is in use. Session data is keyed to both the station and individual port where it occurred and inherits all above attributes of the participant, project, and site as shown in Figure 2.
 
