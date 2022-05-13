@@ -163,8 +163,8 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 | **port\_number** | Port identifier that signifies which station port was used (1 for single port stations, 1,2+ for multiport stations) | non-negative integer | yes |
 | **plug\_start\_datetime** | Date and time of session initialization (plug in) | date/time | yes |
 | **charge\_start\_datetime** | Date and time when charging began | date/time | yes |
-| **session\_duration** | Total duration of session in minutes (plug in to plug out) | non-negative float | yes  |
-| **charging\_duration** | The length of time over which electricity was dispensed, measured in minutes - may not always be equal to the difference between charge\_start\_datetime and charge\_end\_datetime due to charge interruptions or managed charging | non-negative float | yes |
+| **session\_duration** | Total duration of session (plug in to plug out) | duration | yes  |
+| **charging\_duration** | Total duration of time when electricity was actively dispensed - may not always be equal to the difference between charge\_start\_datetime and charge\_end\_datetime due to charge interruptions or managed charging | duration | yes |
 | **energy\_kwh** | Electricity dispensed (in kilowatt-hours) during charging session | non-negative float | yes |
 | **peak\_kw** | Session maximum power delivery (in kilowatts) | non-negative float | yes |
 | **total\_fee\_charged** | The amount charged to the EV driver, in USD, where applicable - zero if driver was not charged for an otherwise paid charger, NULL if charger is not paid | currency (USD) | yes |
