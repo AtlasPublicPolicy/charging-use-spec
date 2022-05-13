@@ -4,6 +4,7 @@ Refer to these field type definitions for data collection formats.
 - **Connector Type** - Standard connector type – One of the following: J1772, CHAdeMO, Tesla, CCS, CCS/CHAdeMO, CCS/Tesla, CHAdeMO/Tesla, CHAdeMO/CCS/Tesla
  - **Currency** - Currency is a specialized numeric field that contains exactly two significant digits.  *Example: 5.00 but not 5.000 or 5*
  - **Date/time** - string field with the format: YYYYMMDD hh:mm:ss [+/-hh:mm] where time is represented by a 24 hour clock and time in brackets represents the distance from coordinated universal time.  *Example: 20220101 01:01:01 [-5:00] represents January 1, 2022 at 12:01 AM ET*
+ - **Duration** - string field with the format HH:MM:SS used to encode elapsed time.
  - **Email** - properly formatted email address. *Example: example<void>@example.com*
  - **Float** - numeric field that may contain up to seven significant digits. *Example: 1.111 or 1.1111111*
  - **ID** - sequence of UTF-8 characters. ID fields labeled unique must be unique to the conditions described in the field description. ID fields that are labeled foreign reference ID fields in other tables.
