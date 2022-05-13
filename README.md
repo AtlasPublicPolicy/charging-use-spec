@@ -13,9 +13,9 @@ The specification is flexible and extensible depending on program specifics and 
 Refer to the [glossary](glossary.md) for definitions of specific termination used in this specification. The [field type and format definitions](field-type-and-format-reference.md) reference defines the data types and formats expected in data collection fields.
 
 ## Core Specification
- - [Registration and Session Data Collection Reference](core-spec/registration-and-session-data-reference.md) - Format and process for registering participant organizations and funded charging stations and collecting session-level usage data.
- - [Validation Reference](core-spec/validation-reference.md) - Validation procedures and parameters for registrations and session use data.
- - [Reporting Metrics Reference](core-spec/reporting-metrics-reference.md) - Common reporting metrics supported by the specification.
+ - [Registration and Session Data Collection Reference](core-specification/registration-and-session-data-reference.md) - Format and process for registering participant organizations and funded charging stations and collecting session-level usage data.
+ - [Validation Reference](core-specification/validation-reference.md) - Validation procedures and parameters for registrations and session use data.
+ - [Reporting Metrics Reference](core-specification/reporting-metrics-reference.md) - Common reporting metrics supported by the specification.
 
 ## Specification Extensions
 
