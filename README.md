@@ -25,7 +25,7 @@ Refer to the [glossary](glossary.md) for definitions of specific termination use
 
 # Supplementary Materials
 
- - [Data Integration Support](supplementary-materials/data-integration-support.md) provides guidance on how to translate out-of-specification registration and useage data into specification-compliant format.
+ - [Data Integration Support](supplementary-materials/data-integration-support.md) provides guidance on how to translate out-of-specification registration and usage data into specification-compliant format.
  - [Example Program Language](supplementary-materials/example-program-language.md) for data collection and provisioning requirements set by funding organizations.
  - Example data files for each of the data collection field specifications. [\[FORTHCOMING\]](roadmap.md)
 
