@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://evchargingspec.org/wp-content/uploads/2022/05/evcu_github.png" alt="EV Charging Use Data Specification logo" width=450/>
+<img src="https://evchargingspec.org/wp-content/uploads/2022/05/evcu_github.png" alt="EV Charging Use Data Specification logo"/>
  </div>
  
  # About
@@ -38,10 +38,10 @@ We welcome contributions from anyone on the specification. You can contribute di
  
  1. Join a public conversation on the [GitHub discussion forum](https://github.com/AtlasPublicPolicy/charging-use-spec/discussions). 
 
- 2. Participate in a meeting. [Atlas Public Policy](https://atlaspolicy.com) has served as the primary convener of parties interested in contributing to the EVCU specification and hosts open meetings. All meetings are recorded and can be watched later. Past and upcoming meetings are available on the [EVCU website](https://evchargingspec.com). 
+ 2. Participate in a meeting. [Atlas Public Policy](https://atlaspolicy.com) has served as the primary convener of parties interested in contributing to the EVCU specification and hosts open meetings. All meetings are recorded and can be watched later. Past and upcoming meetings are available on [evchargingspec.com](https://evchargingspec.com). 
 
  3. Send an email to info@evchargingspec.org with any questions or feedback. All emails sent to this address related to the specification will be published on GitHub. Please indicate in your email if you would like attribution or if you would like to remain anonymous. This email is monitored by staff at [Atlas Public Policy](https://atlaspolicy.com).
 
 See the [specification roadmap](roadmap.md) for upcoming work on the specification including new components and other related work.  
 
-*The content of this specification is [licensed](LICENSE) under GNU General Public License v3.0*
+*The content of this specification is [licensed](LICENSE) under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)*
