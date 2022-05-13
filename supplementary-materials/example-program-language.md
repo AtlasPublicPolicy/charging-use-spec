@@ -9,7 +9,7 @@ Below are terms that are specific to the program.
 - [ENTITY]: This is intended to be the public or private entity that is administering the program.
 - [STATEMENT OF WORK]: The main statement of work for program.
 
-The below text is available in binary format for use in word processing applications here: [example-program-language.odt](https://github.com/AtlasPublicPolicy/charging-use-spec/raw/atlas-development/supplementary-materials/example-program-language.odt)
+The below text is available in binary format for use in word processing applications here: [example-program-language.odt](https://github.com/AtlasPublicPolicy/charging-use-spec/raw/main/supplementary-materials/example-program-language.odt)
 
 ## Definitions
 
