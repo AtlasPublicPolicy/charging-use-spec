@@ -44,4 +44,4 @@ We welcome contributions from anyone on the specification. You can contribute di
 
 See the [specification roadmap](roadmap.md) for upcoming work on the specification including new components and other related work.  
 
-*The content of this specification is licensed under GNU General Public License v3.0*
+*The content of this specification is [licensed](LICENSE) under GNU General Public License v3.0*
