@@ -1,6 +1,6 @@
 # Data Validation
 
-This section describes the individual validations that are be performed on the registration and session data to ensure that they conform to specifications and that measurements fall within expected parameters. Data received by the data aggregator may have quality issues caused by measurement or data processing errors that interfere with successful data ingestion or the calculation of valid reporting metrics.
+This section describes the individual validations to be performed on the registration and session data that ensure that they conform to specifications and that measurements fall within expected parameters. Data received by the data aggregator may have quality issues caused by measurement or data processing errors that interfere with successful data ingestion or the calculation of valid reporting metrics.
 
 The data validation process performs a series of automated checks on the received data, flagging it as erroneous or non-compliant if such checks fail. Data that passes all validation checks will be considered validated data, meaning that the data aggregator has identified it as compliant with the charging use data specification and certified its use in reporting.
 
