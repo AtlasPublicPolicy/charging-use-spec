@@ -31,7 +31,7 @@ The tables in this section outline the field validation types and parameters tha
 | **Name** | **Field(s)** | **Type** | **Description and Parameters** |
 | --- | --- | --- | --- |
 | **Duplicate Project ID** | project\_id | duplicate | The project\_id value already exists in registration data. |
-| **Duplicate Site ID** | site\_id | duplicate | The site\_id value already exists in registration data. |
+| **Duplicate Site ID** | site\_id | duplicate | The site\_id value already exists in registration data (c. |
 | **Duplicate Site Address** | address\_1<br /> address\_2<br />  city <br />state <br />  zip\_code | duplicate | The combination of site address field values already exists in registration data. |
 | **Duplicate Station ID** | station\_id | duplicate | The station\_id value already exists in registration data. |
 | **Power Rating Out of Range** | power\_level\_kw <br />connector\_type | consistency  range | The power\_level\_kw value is within range consistent with station type. Recommended ranges are: 3.2kW – 19.2kW for L2 connectors and 20kW – 360kW for DCFC connectors. |
@@ -57,6 +57,8 @@ Records flagged with an error should be excluded from the reporting data and ref
 | --- | --- | --- | --- |
 | **Invalid Geography** | city<br />state<br />zip\_code<br />latitude<br />longitude | cross reference | The station/site geographic identifiers fall outside of the range of the program geography. E.g. zip\_code does not match master list of eligible Zip codes or lat/lon fall outside program area (or bounding box). |
 | **Activation Date Out of Bounds** | station\_activation\_date <br />project\_award\_date | consistency cross reference | The station\_activation\_date and/or project\_award\_date fall after the reportinging period or before the program start date. |
+| **No Onsite Generation Parameters** | onsite\_generation <br />onsite\_generation\_type <br />onsite\_generation\_power | consistency cross reference | The onsite\_generation\_type and onsite\_generation\_power fields are not NULL if onsite\_generation field is TRUE. |
+| **No Onsite Storage Parameters** | onsite\_storage <br />onsite\_storage\_energy <br />onsite\_storage\_power | consistency cross reference | The <br />onsite\_storage\_energy and onsite\_storage\_power fields are not NULL if onsite\_storage field is TRUE. |
 
 **Table 4. Session Data Error Validations**
 
