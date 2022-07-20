@@ -14,7 +14,7 @@ This document outlines the process, structure, and format for: 1) registering pr
 	 2. [Site Registration](#site-registration)
 	 3. [Station Registration](#station-and-port-registration)
 
-2. [Operating Data Collection](#operatinging-data-collection)
+2. [Operating Data Collection](#operating-data-collection)
 
 # Program Registry and Onboarding Process
 
