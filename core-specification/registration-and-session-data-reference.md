@@ -89,13 +89,12 @@ Also during project onboarding, the [program administrator](../glossary.md) will
 | **host\_first\_name** | Location site host point of contact first name | string | yes |
 | **host\_last\_name** | Location site host point of contact last name | string | yes |
 | **host\_email** | Location site host point of contact email address | email | yes |
-| **host\_email** | Location site host point of contact email address | email | yes |
-| **onsite\_generation** | Is there onsite generation at the site? | TRUE/FALSE | yes |
-| **onsite\_generation\_type** | Type of onsite generation | string | no |
-| **onsite\_generation\_power** | Nameplate capacity of onsite generation in kW | positive float | no |
-| **onsite\_storage** | Is there onsite battery storage at the site? | TRUE/FALSE | yes |
-| **onsite\_storage\_energy** | Energy capacity of onstite battery storage system in kWh | positive float | no |
-| **onsite\_storage\_power** | Nameplate capacity of onsite battery storage system in kW | positive float | no |
+| **onsite\_generation** | Is there onsite energy generation at the site? | TRUE/FALSE | yes |
+| **onsite\_generation\_type** | Type of onsite energy generation | string | no |
+| **onsite\_generation\_power** | Nameplate capacity of onsite energy generation in kW | positive float | no |
+| **onsite\_storage** | Is there onsite energy storage at the site? | TRUE/FALSE | yes |
+| **onsite\_storage\_energy** | Energy capacity of onsite energy storage system in kWh | positive float | no |
+| **onsite\_storage\_power** | Nameplate capacity of onsite energy storage system in kW | positive float | no |
 | **county** | Site county (or county analogue) | string | no |
 | **site\_type\_detail** | Additional detail on site host land use | string | no |
 
