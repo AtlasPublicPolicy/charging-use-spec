@@ -174,15 +174,14 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 | **station\_id** | Station identifier | ID (foreign) | yes |
 | **port\_number** | Port identifier that signifies which station port was used (1 for single port stations, 1,2+ for multiport stations) | non-negative integer | yes |
 | **plug\_start\_datetime** | Date and time of session initialization (plug in) | date/time | yes |
-| **plug\_end\_datetime** | Date and time of session terminatino (plug out)  | date/time | yes |
+| **plug\_end\_datetime** | Date and time of session termination (plug out)  | date/time | yes |
 | **charge\_start\_datetime** | Date and time when charging began | date/time | yes |
-| **session\_duration** | Total duration of session (plug in to plug out) | duration | yes  |
+| **charge\_end\_datetime** | Charging end date time | date/time | no |
+| **session\_duration** | Total duration of session (plug in to plug out) | duration | no  |
 | **charging\_duration** | Total duration of time when electricity was actively dispensed - may not always be equal to the difference between charge\_start\_datetime and charge\_end\_datetime due to charge interruptions or managed charging | duration | yes |
 | **energy\_kwh** | Electricity dispensed (in kilowatt-hours) during charging session | non-negative float | yes |
 | **peak\_kw** | Session maximum power delivery (in kilowatts) | non-negative float | yes |
 | **total\_fee\_charged** | The amount charged to the EV driver, in USD, where applicable - zero if driver was not charged for an otherwise paid charger, NULL if charger is not paid | currency (USD) | yes |
-| **plug\_end\_datetime** | Session end (plug out) date time | date/time | no |
-| **charge\_end\_datetime** | Charging end date time | date/time | no |
 | **energy\_fee** | Fee charged to user per kilowatt-hour | currency (USD) | no |
 | **session\_fee** | Fee charged to user per session | currency (USD) | no |
 | **time\_fee** | Fee charged to users per minute | currency (USD) | no |
