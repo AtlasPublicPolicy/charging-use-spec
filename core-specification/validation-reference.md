@@ -57,6 +57,8 @@ Records flagged with an error should be excluded from the reporting data and ref
 | --- | --- | --- | --- |
 | **Invalid Geography** | city<br />state<br />zip\_code<br />latitude<br />longitude | cross reference | The station/site geographic identifiers fall outside of the range of the program geography. E.g. zip\_code does not match master list of eligible Zip codes or lat/lon fall outside program area (or bounding box). |
 | **Activation Date Out of Bounds** | station\_activation\_date <br />project\_award\_date | consistency cross reference | The station\_activation\_date and/or project\_award\_date fall after the reportinging period or before the program start date. |
+| **No Onsite Generation Parameters** | onsite\_generation <br />onsite\_generation\_type <br />onsite\_generation\_power | consistency cross reference | The onsite\_generation\_type and onsite\_generation\_power fields are not NULL if onsite\_generation field is TRUE. |
+| **No Onsite Storage Parameters** | onsite\_storage <br />onsite\_storage\_energy <br />onsite\_storage\_power | consistency cross reference | The <br />onsite\_storage\_energy and onsite\_storage\_power fields are not NULL if onsite\_storage field is TRUE. |
 
 **Table 4. Session Data Error Validations**
 
