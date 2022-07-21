@@ -10,7 +10,7 @@ Government and utility funded EV charging station deployment programs are expand
 # Specification Overview
 The specification is flexible and extensible depending on program specifics and evaluation measurement and verification requirements of the funding organization. It is organized into the core specification which details data collection fields, data validations, and reporting outputs for basic tracking, evaluation and verification uses. The specification also supports  extensions that enable additional reporting functionality.
 
-Refer to the [glossary](glossary.md) for definitions of specific termination used in this specification. The [field type and format definitions](field-type-and-format-reference.md) reference defines the data types and formats expected in data collection fields.
+Refer to the [glossary](glossary.md) for definitions of specific termination used in this specification and an outline of the [roles and responsibilities](glossary.md#specification-roles) of the entities involved in the data reporting process. The [field type and format definitions](field-type-and-format-reference.md) reference defines the data types and formats expected in data collection fields.
 
 ## Core Specification
  - [Registration and Session Data Collection Reference](core-specification/registration-and-session-data-reference.md) - Format and process for registering participant organizations and funded charging stations and collecting session-level usage data.
