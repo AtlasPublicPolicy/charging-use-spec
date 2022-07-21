@@ -2,14 +2,12 @@
 Throughout the specification, the following terms are used as defined below
  - **Charging** - When energy is flowing between the charging station and the vehicle.
  - **Connector** - The physical plug/coupler configuration - either standards-based or proprietary.
- - **Data Aggregator** - The entity tasked with collecting, processing, and reporting on the charging use data. May be the Program Administrator or a third party.
+
  - **Data Provider** - The organization that collects and maintains charging use data. May be the Obligated Party or a third party vendor.
  - **Disadvantaged Community (DAC)** - Area typically identified by low-income, historic underinvestment, pollution burdened, or other indicators depending on the jurisdiction.
  - **Idling** - When a vehicle is plugged into a charger but not receiving power. May include time before, after, or between active charging periods.
  - **Network** - Charging Network Service Provider. 
- - **Obligated Party** - The organization responsible for meeting data collection and provisioning requirements. Usually the program funding recipient.
  - **Port** - The individual plug or coupler that physically interfaces with a single vehicle in a one-to-one connection to deliver charge. Ports may be one of any connector types.
- - **Program Administrator** - The organization that manages the charging station deployment program through which station deployments receive funding. Usually a government agency, electric utility, or an agent thereof. 
  - **Program** - Charger deployment program such as grants, rebates, or direct installation managed by the Program Administrator
  - **Project** - Collection of one or more stations at one or more sites that are attached to the same funding/rebate application or direct installation deployment. Project is defined by the Program Administrator.
  - **Reporting Period** - the program-defined time interval over which data is reported. The reporting period defines the frequency of data collection (e.g. monthly, quarterly, biannually)
@@ -17,3 +15,21 @@ Throughout the specification, the following terms are used as defined below
  - **Site Host** - Entity or organization that controls the property where a charging site is located. Often the same as the obligated party.
  - **Site** - The common geographic place (address/parking structure/etc.) where one or more charging stations are located.
  - **Station** - The single charging unit/equipment. One charging station may have multiple charging ports (which may or may not be able to be used simultaneously) and may support multiple connector types.
+
+## Specification Roles
+The specification outlines four (4) specific roles in the data collection and reporting process. The roles fall into two (2) categories.
+*  **Implementers** — which includes the **Program Administrator** and the **Data Aggregator**
+*  **Participants** — which includes the **Obligated Party** and the **Data Provider**
+
+Each role may be filled by a different organization, or one organization may cover the responsibilities of both roles within a category. Table 1 provides a description of each role and their general responsibilities. In both categories, there may be opportunities for repsonibilies to be delegated between roles within the same category.
+
+**Table 1: Roles and Responsibilities**
+
+| **Role** | **Description** | **Responsibilities**
+| --- | --- | --- | 
+| **Program Administrator** | The organization that manages the charging station deployment program through which station deployments receive funding. Usually a government agency, electric utility, or an agent thereof. | Onboard participants.</br></br> Collect inventory data and submit to data aggregator (in compliant format).</br></br> Set rules and requirements for data reporting. </br></br> Ensure compliance.
+| **Data Aggregator** | The entity tasked with gathering, processing, and reporting on the charging use data. Often a third-party contractor, though might also be the same as the Program Administrator.  | Gather inventory data from Program Administrator.</br></br> Gather operational data from participants.</br></br> Validate, clean, and transform data.</br></br>Generate reports and submit Program Administrator.
+| **Obligated Party** | The organization responsible for meeting data collection and provisioning requirements. Usually the program funding recipient. | Gather and submit inventory information to Program Administrator.</br></br> Collect operations cost data and submit to Data Aggregator (in compliant format).</br></br> Ensure Data Provider is meeting reporting requirements.
+| **Data Provider** |   The organization that collects and maintains charging use data. Often will be a third party vendor such as a network service provider but may be the Obligated Party if stations are not networked. | Gather and submit inventory information to Program Administrator.</br></br> Collect session data and report to Data Aggregator (in compliant format).
+
+
