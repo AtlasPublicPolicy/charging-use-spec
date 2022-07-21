@@ -31,7 +31,7 @@ The tables in this section outline the field validation types and parameters tha
 | **Name** | **Field(s)** | **Type** | **Description and Parameters** |
 | --- | --- | --- | --- |
 | **Duplicate Project ID** | project\_id | duplicate | The project\_id value already exists in registration data. |
-| **Duplicate Site ID** | site\_id | duplicate | The site\_id value already exists in registration data (c. |
+| **Duplicate Site ID** | site\_id | duplicate | The site\_id value already exists in registration data. |
 | **Duplicate Site Address** | address\_1<br /> address\_2<br />  city <br />state <br />  zip\_code | duplicate | The combination of site address field values already exists in registration data. |
 | **Duplicate Station ID** | station\_id | duplicate | The station\_id value already exists in registration data. |
 | **Power Rating Out of Range** | power\_level\_kw <br />connector\_type | consistency  range | The power\_level\_kw value is within range consistent with station type. Recommended ranges are: 3.2kW – 19.2kW for L2 connectors and 20kW – 360kW for DCFC connectors. |
