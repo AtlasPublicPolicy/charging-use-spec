@@ -146,8 +146,6 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 Station usage is tracked by collecting data on:
 * **individual charging sessions** — the period between when a user connects their vehicle (plug in) and disconnects their vehicle (plug out).  
 * **station operating costs** — summary data on energy, maintenance and repair costs over the reporitng interval.  
- 
-The [data provider](../glossary.md) collects session data for each reporting period as defined by the [program administrator](../glossary.md). The data is transmitted to the [data aggregator](../glossary.md) by the [data provider](global-reference.md) (or [obligated party](../glossary.md) in the case where they operate their stations). Session data includes key information about how, when, and, for how long a charger is in use. Session data is keyed to the station and individual port (for multiport stations) where it occurred and inherits all above attributes of the participant, project, and site as shown in Figure 2.
 
 **Figure 2. Operating Data Reporting Hierarchy**
 ```mermaid
@@ -162,7 +160,10 @@ B --station_id--> C
 B --station_id--> D 
 ```
 
-Generally, the [data provider](../glossary.md) may transmit operating data to the [data aggregator](../glossary.md) by: data portal, FTP, API, email, or other data sharing procedure. While data sharing is designed to be container agnostic, session data must conform to the format described in Table 5 and should be stored in (or convertible to) a broadly compatible container, such as a comma-separated values (CSV) file. Data transmissions procedure and file format may be further specified by the [program administrator](../glossary.md) to suit program needs.
+### Session Data
+The [data provider](../glossary.md) collects session data for each reporting period as defined by the [program administrator](../glossary.md). The data is transmitted to the [data aggregator](../glossary.md) by the [data provider](global-reference.md) (or [obligated party](../glossary.md) in the case where they operate their stations). Session data includes key information about how, when, and, for how long a charger is in use. Session data is keyed to the station and individual port (for multiport stations) where it occurred and inherits all above attributes of the participant, project, and site as shown in Figure 2.
+
+Generally, the [data provider](../glossary.md) may transmit session data to the [data aggregator](../glossary.md) by: data portal, FTP, API, email, or other data sharing procedure. While data sharing is designed to be container agnostic, session data must conform to the format described in Table 5 and should be stored in (or convertible to) a broadly compatible container, such as a comma-separated values (CSV) file. Data transmissions procedure and file format may be further specified by the [program administrator](../glossary.md) to suit program needs.
 
 Refer to [Field Type and Format Reference](../field-type-and-format-reference.md) for more information on field types and formats. *Additional fields may be appended as new columns as needed, but existing columns and their formats should be maintained to support compatibility.*
 
@@ -174,15 +175,14 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 | **station\_id** | Station identifier | ID (foreign) | yes |
 | **port\_number** | Port identifier that signifies which station port was used (1 for single port stations, 1,2+ for multiport stations) | non-negative integer | yes |
 | **plug\_start\_datetime** | Date and time of session initialization (plug in) | date/time | yes |
-| **plug\_end\_datetime** | Date and time of session terminatino (plug out)  | date/time | yes |
+| **plug\_end\_datetime** | Date and time of session termination (plug out)  | date/time | yes |
 | **charge\_start\_datetime** | Date and time when charging began | date/time | yes |
-| **session\_duration** | Total duration of session (plug in to plug out) | duration | yes  |
+| **charge\_end\_datetime** | Charging end date time | date/time | no |
+| **session\_duration** | Total duration of session (plug in to plug out) | duration | no  |
 | **charging\_duration** | Total duration of time when electricity was actively dispensed - may not always be equal to the difference between charge\_start\_datetime and charge\_end\_datetime due to charge interruptions or managed charging | duration | yes |
 | **energy\_kwh** | Electricity dispensed (in kilowatt-hours) during charging session | non-negative float | yes |
 | **peak\_kw** | Session maximum power delivery (in kilowatts) | non-negative float | yes |
 | **total\_fee\_charged** | The amount charged to the EV driver, in USD, where applicable - zero if driver was not charged for an otherwise paid charger, NULL if charger is not paid | currency (USD) | yes |
-| **plug\_end\_datetime** | Session end (plug out) date time | date/time | no |
-| **charge\_end\_datetime** | Charging end date time | date/time | no |
 | **energy\_fee** | Fee charged to user per kilowatt-hour | currency (USD) | no |
 | **session\_fee** | Fee charged to user per session | currency (USD) | no |
 | **time\_fee** | Fee charged to users per minute | currency (USD) | no |
@@ -195,6 +195,10 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 
 **Table 5: Operating Costs Reporting**
 
+Operating costs are collected by the [obligated party](../glossary.md) or the [data provider](../glossary.md). Operating costs data may be submitted by an online form, reporting spreadsheet or other reporting method as specified by the [program administrator](../glossary.md) or [data aggregator](../glossary.md). Because collection of operating costs data is labor intensive, recommended practice is to collect these data on an infrequent basis.
+
+Refer to [Field Type and Format Reference](../field-type-and-format-reference.md) for more information on field types and formats. *Additional fields may be appended as new columns as needed, but existing columns and their formats should be maintained to support compatibility.*
+
 | **Field** | **Definition** | **Data Format** | **Required** |
 | --- | --- | --- | --- |
 | **station\_id** | Station identifier | ID (foreign) | yes |
@@ -204,5 +208,7 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 | **repair\_cost** | Total amount paid for repair costs during reporting period | currency | yes |
 | **electricity\_cost** | Total amount paid for station electricity use during reporting period (estimated if station is not individually metered) | currency | yes |
 | **electricity\_disbursed** | Amount of energy in kWh delivered by station during reporting period | positive float | yes |
+| **network\_costs** | Sum of costs associated with network access, including network service fees, communications costs, transaction fees, etc. | positive float | yes |
+
 
 
