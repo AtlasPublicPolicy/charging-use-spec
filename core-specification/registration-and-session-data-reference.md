@@ -1,4 +1,4 @@
-# Core Registration and Session Data Collection Reference
+# Core Registration and Operating Data Collection Reference
 
 This document outlines the process, structure, and format for: 1) registering projects, and associated sites and stations, and 2) collecting core station operating (session & cost) data. These data are then [validated](validation-reference.md) with the resulting information compiled into standard [reporting metrics](reporting-metric-reference).
 
