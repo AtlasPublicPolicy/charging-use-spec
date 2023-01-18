@@ -6,9 +6,9 @@ The data validation process performs a series of automated checks on the receive
 
 Validations for data fields return one of three results:
 
-![](https://via.placeholder.com/15/09692e/000000?text=+)**Valid** – entry conforms to expected type, format, and parameters   
-![](https://via.placeholder.com/15/ffc800/000000?text=+)**Warning** – entry exceeds parameter(s) range and requires manual quality assurance check  
-![](https://via.placeholder.com/15/c40404/000000?text=+)**Error** – required data missing or not conformant to expected type, format, or parameters  
+![](https://via.placeholder.com/15/09692e/000000?text=+)  **Valid** – entry conforms to expected type, format, and parameters   
+![](https://via.placeholder.com/15/ffc800/000000?text=+)  **Warning** – entry exceeds parameter(s) range and requires manual quality assurance check  
+![](https://via.placeholder.com/15/c40404/000000?text=+)  **Error** – required data missing or not conformant to expected type, format, or parameters  
 
 [Warnings](#warning-validations) result from:
 - Measurement parameter validation failures specified in the [Warnings Validations](#warning-validations) section of this document.
@@ -65,7 +65,7 @@ Records flagged with an error should be excluded from the reporting data and ref
 | **Name** | **Field(s)** | **Type** | **Description and Parameters** |
 | --- | --- | --- | --- |
 | **Date Outside Reporting Period** | plug\_start\_datetime<br />charge\_start\_datetime | consistency | The plug\_start\_datetime or charge\_start\_datetime values do not fall within the date range of the reporting period. |
-| **Inconsistent Start and End Datetimes** | plug\_start\_datetime<br />plug\_end\_datetime<br />charge\_start\_datetime<br />charge\_end\_datetime | consistency | The plug_end_datetime or charge_end_datetime  value occurs prior to the respective plug_start_datetime or charge_start_datetime value. |
+| **Chronologically Inconsistent Start and End Datetimes** | plug\_start\_datetime<br />plug\_end\_datetime<br />charge\_start\_datetime<br />charge\_end\_datetime | consistency | The plug_end_datetime or charge_end_datetime  value occurs prior to the respective plug_start_datetime or charge_start_datetime value. |
 | **No Matching Registration** | station\_id | cross reference | The session station\_id is not in the program station registry. |
 | **Zero Length Session Duration** | session\_duration<br />charging\_duration | constraint | The session\_duration or charging\_duration values are zero. |
 | **Zero Energy Session** | energy\_kwh | constraint | The energy\_kwh value is zero. |
