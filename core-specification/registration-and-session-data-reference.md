@@ -208,7 +208,7 @@ Refer to [Field Type and Format Reference](../field-type-and-format-reference.md
 | **repair\_cost** | Total amount paid for repair costs during reporting period | currency | yes |
 | **electricity\_cost** | Total amount paid for station electricity use during reporting period (estimated if station is not individually metered) | currency | yes |
 | **electricity\_disbursed** | Amount of energy in kWh delivered by station during reporting period | positive float | yes |
-| **network\_costs** | Sum of costs associated with network access, including network service fees, communications costs, transaction fees, etc. | positive float | yes |
+| **network\_cost** | Sum of costs associated with network access, including network service fees, communications costs, transaction fees. | positive float | yes |
 
 
 

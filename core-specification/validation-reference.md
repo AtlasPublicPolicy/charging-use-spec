@@ -65,6 +65,7 @@ Records flagged with an error should be excluded from the reporting data and ref
 | **Name** | **Field(s)** | **Type** | **Description and Parameters** |
 | --- | --- | --- | --- |
 | **Date Outside Reporting Period** | plug\_start\_datetime<br />charge\_start\_datetime | consistency | The plug\_start\_datetime or charge\_start\_datetime values do not fall within the date range of the reporting period. |
+| **Inconsistent Start and End Datetimes** | plug\_start\_datetime<br />plug\_end\_datetime<br />charge\_start\_datetime<br />charge\_end\_datetime | consistency | The plug_end_datetime or charge_end_datetime  value occurs prior to the respective plug_start_datetime or charge_start_datetime value. |
 | **No Matching Registration** | station\_id | cross reference | The session station\_id is not in the program station registry. |
 | **Zero Length Session Duration** | session\_duration<br />charging\_duration | constraint | The session\_duration or charging\_duration values are zero. |
 | **Zero Energy Session** | energy\_kwh | constraint | The energy\_kwh value is zero. |
