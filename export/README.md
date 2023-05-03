@@ -1,0 +1,2 @@
+# How to Export the Specification to a PDF
+ The Electric Vehicle Charging Use Data Specification can be combined into a single Markdown file using the combine.bat batch file. The batch file runs from the Windows command prompt and requires you to have the entire repository on your hard drive. You can use GitHub Desktop for this or download the repository directly from GitHub. After running the batch file, you can use a tool like https://md2pdf.netlify.app to convert the combined Markdown file into a PDF. 
