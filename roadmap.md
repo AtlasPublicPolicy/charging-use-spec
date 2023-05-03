@@ -3,11 +3,9 @@
 
 ## Next steps
 
-Planned additions in Summer 2022
-
-* **Example Data** – Example data files for each specification table.
-
 * **Station Reliability** – Standardized data collection and reporting of reliability metrics such as up time, and measurements of charging session success.
+
+* * **Example Data** – Example data files for each specification table.
 
 * **Charging Equipment and Installation Costs** – standardized collection of detailed costs data, such as equipment cost and line-item installation costs.
 
