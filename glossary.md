@@ -2,26 +2,25 @@
 Throughout the specification, the following terms are used as defined below
  - **Charging** - When energy is flowing between the charging station and the vehicle.
  - **Connector** - The physical plug/coupler configuration - either standards-based or proprietary.
-
  - **Data Provider** - The organization that collects and maintains charging use data. May be the Obligated Party or a third party vendor.
  - **Disadvantaged Community (DAC)** - Area typically identified by low-income, historic underinvestment, pollution burdened, or other indicators depending on the jurisdiction.
  - **Idling** - When a vehicle is plugged into a charger but not receiving power. May include time before, after, or between active charging periods.
  - **Network** - Charging Network Service Provider. 
- - **Port** - The individual plug or coupler that physically interfaces with a single vehicle in a one-to-one connection to deliver charge. Ports may be one of any connector types.
+ - **Port** - The component or system on a charger capable of connecting to and charging charging a single EV on a one-to-one basis. Ports are the basic data-generating unit of charging equipment. One port may connect to vehicles using more than one connector type, but only one connector type may be used at a time.
  - **Program** - Charger deployment program such as grants, rebates, or direct installation managed by the Program Administrator
  - **Project** - Collection of one or more stations at one or more sites that are attached to the same funding/rebate application or direct installation deployment. Project is defined by the Program Administrator.
  - **Reporting Period** - the program-defined time interval over which data is reported. The reporting period defines the frequency of data collection (e.g. monthly, quarterly, biannually)
  - **Session** - A single charging event, defined as the time between plug-in and plug-out when a single vehicle is connected to a charging port. Can include charging and idle time.
- - **Site Host** - Entity or organization that controls the property where a charging site is located. Often the same as the obligated party.
- - **Site** - The common geographic place (address/parking structure/etc.) where one or more charging stations are located.
- - **Station** - The single charging unit/equipment. One charging station may have multiple charging ports (which may or may not be able to be used simultaneously) and may support multiple connector types.
+ - **Site Host** - Entity or organization that controls the property where a charging station is located. Often the same as the obligated party.
+ - **Station** - The single physical place (address/parking structure/etc.) where charging equipment containing one or more ports is located.
+
 
 ## Specification Roles
 The specification outlines four (4) specific roles in the data collection and reporting process. The roles fall into two (2) categories.
 *  **Implementers** — which includes the **Program Administrator** and the **Data Aggregator**
 *  **Participants** — which includes the **Obligated Party** and the **Data Provider**
 
-Each role may be filled by a different organization, or one organization may cover the responsibilities of both roles within a category. Table 1 provides a description of each role and their general responsibilities. In both categories, there may be opportunities for repsonibilies to be delegated between roles within the same category.
+Each role may be filled by a different organization, or one organization may cover the responsibilities of both roles within a category. Table 1 provides a description of each role and their general responsibilities. In both categories, there may be opportunities for responsibilities to be delegated between roles within the same category.
 
 **Table 1: Roles and Responsibilities**
 
