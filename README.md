@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://evchargingspec.org/wp-content/uploads/2022/05/evcu_github.png" alt="EV Charging Use Data Specification logo"/>
+<img src="/evcu_github.png" alt="EV Charging Use Data Specification logo"/>
  </div>
  
  # About
